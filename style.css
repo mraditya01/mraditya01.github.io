@@ -55,9 +55,10 @@ body {
 }
 
 .square { 
-    max-width: 35%; 
-    max-height: 35%;
+    max-width: 25%; 
+    max-height: 25%;
     margin-right: 50px;
+    margin-top: 50px;
 }
 
 .column {
@@ -104,12 +105,9 @@ section ul1{
     font-size: 3.5em;
 }
 
-section li {
-    font-size: 14px;
-    margin-left: 10px;
-    list-style-type: circle;
- }
-
+section li{
+    font-size: 0.4em;
+}
 
 
 img{
@@ -171,14 +169,6 @@ p{
     margin-bottom: 1%;
 }
 
-h7{
-    font-size: 0.8em;
-    word-break:normal;
-    margin-bottom: 1%;
-    color: rgb(141, 141, 141);
-}
-
-
 li{
     list-style: none;
 }
@@ -210,8 +200,7 @@ a:hover{
     transition-duration: 0.4s;
     cursor: pointer;
 }
-
-
+  
 .button1 {
     background-color: darkorange;
     color: white;
@@ -223,31 +212,6 @@ a:hover{
     color: darkorange;
     border: 2px solid darkorange;
 }
-
-.top {
-    border: none;
-    color: black;
-    max-width: 100%;
-    max-height: 100%;
-    text-align: right;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5em;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.top1 {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-}
-
-.top:hover {
-    color: #B49C68;
-}
-
 
 section li{
     font-size: 2.5em;
@@ -292,7 +256,7 @@ section li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1px 1px 1px 1px;
+    padding: 1vw 2vw 1vw 4vw;
     /* box-shadow: 10px 10px; */
     background-color: white;
     
@@ -328,39 +292,8 @@ footer{
     margin: 0 0.75em;
 }
 
-
-/* ICON HOVER */
-.fa-home{
-    margin-top: 10px;
-    font-size: 25px;
-}
-#onhovericon{
-    visibility: hidden;
-}
-#a:hover ~ #onhovericon{
-    visibility: visible;
-}
-
-
-.fa-home{
-
-}
-
-
-
 @media screen and (max-width: 1300px) {
-    .header {
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 8%;
-        background-color: white;
-        /* color: #fff; */
-        padding: 10px;
-        }
-
+    
     .picture{
         height: 40vw;
     }
@@ -417,17 +350,7 @@ footer{
     }
 
     @media screen and (max-width: 950px) {
-        .header {
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 8%;
-        background-color: white;
-        /* color: #fff; */
-        padding: 10px;
-        }
+        
 
         body{
             width: 100vw;
