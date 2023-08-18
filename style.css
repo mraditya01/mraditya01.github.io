@@ -1,0 +1,455 @@
+*{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    animation: fadeInAnimation ease 1s;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    overflow-x: hidden;
+  }
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0px,3em);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px,0px);
+     }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 15%;
+    margin-bottom:0%;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+/* IMAGES */
+
+.circular--square { 
+    border-radius: 50%; 
+    max-width: 25%; 
+    max-height: 25%;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.square { 
+    max-width: 25%; 
+    max-height: 25%;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.column {
+    float: left;
+    width: 45%;
+    padding: 20px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.gif {
+    max-width: 3050px; 
+    max-height: 3050px;
+}
+/* Section */
+
+.greeting {
+    margin-top: 50px;
+    /* margin-left: 20em; */
+}
+section{
+    /* height: 50vh; */
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:flex-start;
+    
+}
+
+section h3{
+    padding-bottom: 0.5em;
+}
+
+section ul{
+    font-size: 0.4em;
+}
+
+section ul1{
+    font-size: 3.5em;
+}
+
+section li{
+    font-size: 0.4em;
+}
+
+
+img{
+    pointer-events: none;
+}
+
+.picture{
+    height: 30vw;
+}
+
+nav{
+    position: fixed;
+    left: 10%;
+    height: 100%;
+    top: 20em;
+    font-weight: 500;
+    /* background-color:lightgray; */
+}
+
+nav ul li {
+    padding: 0.2em;
+    font-size: 1.25em;
+    text-align: right;
+}
+
+h1{
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+h3{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+h5{
+    font-size: 1.3em;
+    margin-bottom: 0.2em;
+}
+
+h6{
+    font-size: 0.6em;
+    margin-bottom: 0.2em;
+}
+
+p{
+    font-size: 1em;
+    word-break:normal;
+    margin-bottom: 1%;
+}
+
+li{
+    list-style: none;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+    -webkit-transition: color .5s ease;
+    -moz-transition: color .5s ease;
+    -ms-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .2s ease;
+}
+
+a:hover{
+    color: #B49C68;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+.button1 {
+    background-color: darkorange;
+    color: white;
+    border: 2px solid white;
+}
+
+.b:hover, .button1:hover {
+    background-color: white;
+    color: darkorange;
+    border: 2px solid darkorange;
+}
+
+section li{
+    font-size: 2.5em;
+}
+
+section li a{
+        font-size: 2em;
+}
+
+.card{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(151, 151, 151);
+    /* border-radius: 2vw; */
+    margin: 1vw;
+    min-width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw 2vw 1vw 4vw;
+    /* box-shadow: 10px 10px; */
+    background-color: white;
+    
+}
+
+.card .wide{
+    height: 3vw;
+    width: fit-content;
+    overflow: hidden;
+    object-fit:fill;
+}
+
+.card p{
+    font-size: 0.8vw;
+}
+
+.card2{
+    border-style: solid;
+    border-width: 1px;
+    margin: 1vw;
+    min-width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw 2vw 1vw 4vw;
+    /* box-shadow: 10px 10px; */
+    background-color: white;
+    
+}
+
+.card2 .wide{
+    height: 3vw;
+    width: fit-content;
+    overflow: hidden;
+    object-fit:fill;
+}
+
+.card2 p{
+    font-size: 0.8vw;
+}
+
+footer{
+    text-align: center;
+    margin: 1em;
+    font-weight: 600;
+}
+
+.exp{
+    display: flexbox;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1em;
+}
+
+.exp-icon{
+    height:6em;
+    margin: 0 0.75em;
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .picture{
+        height: 40vw;
+    }
+
+    nav ul li {
+        font-size: 2em;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+    
+    h2{
+        font-size: 2.3em;
+        font-weight: lighter;
+    }
+    
+    h3{
+        font-size: 2em;
+    }
+    
+    h4{
+        font-size: 1.7em;
+    }
+    
+    h5{
+        font-size: 1.5em;
+    }
+
+    h6{
+        font-size: 1.2em;
+    }
+    
+    p{
+        font-size: 1.3em;
+    }
+
+    section li{
+        font-size: 2em;
+        margin: 0.5em;
+    }
+    
+    section li a{
+            font-size: 2em;
+    }
+
+    .card{
+        margin: 2vw;
+        min-width: 40vw;
+    }
+
+    .card p{
+        font-size: 1.3vw;
+    }
+
+    @media screen and (max-width: 950px) {
+        
+
+        body{
+            width: 100vw;
+            max-width: 100%;
+        }
+
+        nav{
+            font-size: 0;
+        }
+
+        .content{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        section{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            align-items:baseline;
+            padding-top: 3em;
+            margin-top: 2em;
+        }
+
+        #home{
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        #contact{
+            margin-bottom: 6em;
+        }
+
+        .picture{
+            height: 60vw;
+        }
+
+        nav ul li {
+            font-size: 1.1em;
+        }
+
+        h1{
+            font-size: 7vw;
+        }
+        
+        h2{
+            font-size: 5vw;
+            font-weight: lighter;
+        }
+        
+        h3{
+            font-size: 1.5em;
+        }
+        
+        h4{
+            font-size: 1.2em;
+        }
+        
+        h5{
+            font-size: 1.2em;
+        }
+
+        h6{
+            font-size: .9em;
+        }
+        
+        p{
+            font-size: 1em;
+        }
+    
+        section li{
+            font-size: 1.3em; 
+        }
+        
+        section li a{
+                font-size: 2em;
+                margin: 0.7em 0;
+            }
+
+        .card{
+            margin: 3vw;
+            width: 65vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: baseline;
+        }
+    
+
+        .card .wide{
+            width: auto;
+            height: auto;
+            overflow:hidden;
+            object-fit:cover;
+        }
+
+        .card p{
+            font-size: 0.8em;
+        }
+    }
+}
