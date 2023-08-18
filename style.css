@@ -106,6 +106,9 @@ section ul1{
 }
 
 section li{
+    display: list-item; /* This has to be "list-item"                                          */
+    margin-left : 1em;  /* If you use default list-style-position 'outside', you may need this */
+    list-style-type: square;  
     font-size: 0.4em;
 }
 
@@ -213,6 +216,24 @@ a:hover{
     border: 2px solid darkorange;
 }
 
+.top {
+    border: none;
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+.top1 {
+    background-color: white;
+    color: white;
+}
+
+
+
 section li{
     font-size: 2.5em;
 }
@@ -293,7 +314,49 @@ footer{
 }
 
 @media screen and (max-width: 1300px) {
-    
+    .header {
+        overflow: hidden;
+        background-color: #ffffff;
+        padding: 20px 60px;
+        /* top: 10px; */
+        height: 2%;
+        width: 100%;
+        position: fixed;
+        
+      }
+      
+      /* Style the header links */
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+      
+      /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      
+      /* Change the background color on mouse-over */
+      
+      /* Style the active/current link*/
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+      
+      /* Float the link section to the right */
+      .header-right {
+        float: right;
+      }
+
+      
     .picture{
         height: 40vw;
     }
