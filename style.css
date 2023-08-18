@@ -55,10 +55,9 @@ body {
 }
 
 .square { 
-    max-width: 25%; 
-    max-height: 25%;
+    max-width: 35%; 
+    max-height: 35%;
     margin-right: 50px;
-    margin-top: 50px;
 }
 
 .column {
@@ -102,7 +101,7 @@ section ul{
 }
 
 section ul1{
-    font-size: 3.5em;
+    font-size: 2.5em;
 }
 
 section li{
@@ -222,7 +221,7 @@ a:hover{
     text-align: right;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 25px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -277,7 +276,6 @@ section li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1vw 2vw 1vw 4vw;
     /* box-shadow: 10px 10px; */
     background-color: white;
     
@@ -312,7 +310,13 @@ footer{
     height:6em;
     margin: 0 0.75em;
 }
-
+.fa-link{
+    font-size: 0.8vw;
+}
+.fa-home{
+    margin-top: 15px;
+    font-size: 1.3vw;
+}
 @media screen and (max-width: 1300px) {
     .header {
         overflow: hidden;
@@ -324,7 +328,11 @@ footer{
         position: fixed;
         
       }
-      
+      .fa-home{
+        margin-top: 15px;
+        font-size: 3.3vw;
+    }
+    
       /* Style the header links */
       .header a {
         float: left;
@@ -391,7 +399,7 @@ footer{
     }
     
     p{
-        font-size: 1.3em;
+        font-size: 1.6em;
     }
 
     section li{
