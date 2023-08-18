@@ -98,6 +98,7 @@ section h3{
 
 section ul{
     font-size: 0.4em;
+    margin-bottom: 10px;
 }
 
 section ul1{
@@ -151,7 +152,7 @@ h3{
 }
 
 h4{
-    font-size: 1.15em;
+    font-size: 1.4em;
     font-weight: 500;
 }
 
@@ -387,7 +388,7 @@ footer{
     }
     
     h4{
-        font-size: 1.7em;
+        font-size: 2.4em;
     }
     
     h5{
@@ -479,7 +480,7 @@ footer{
         }
         
         h4{
-            font-size: 1.2em;
+            font-size: 1.4em;
         }
         
         h5{
