@@ -1,86 +1,52 @@
 # Muhammad Raditya Giovanni - Portfolio
 
-A modern, responsive portfolio website showcasing my research, projects, and professional experience in autonomous vehicles and AI.
-
-## Built with
-
-- **[Astro](https://astro.build)** - Modern static site generator
-- **[TailwindCSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[DaisyUI](https://daisyui.com/)** - Component library for TailwindCSS
-- **[FontAwesome](https://fontawesome.com/)** - Icon library
+A modern, responsive portfolio website showcasing research, projects, and professional experience in autonomous vehicles and AI.
 
 ## Features
 
-- ✨ Dark theme with modern design
-- 📱 Fully responsive (desktop, tablet, mobile)
-- ⚡ Fast performance (static site generation)
-- 🎨 Customizable color scheme
-- 🔍 SEO optimized
+- ✨ Modern dark theme with orange accent color
+- 📱 Fully responsive design (desktop, tablet, mobile)
+- 🎨 Sidebar navigation on desktop, mobile menu on smaller screens
+- ⚡ Lightweight and fast (static HTML/CSS/JS)
+- 🔗 All content sections: Research, Education, Projects, Experience, Skills, Awards
 - 📄 PDF CV download
-- 🤖 Automatic GitHub Pages deployment
+- 🤖 Simple and maintainable codebase
 
-## Project Structure
+## Structure
 
 ```
-├── src/
-│   ├── components/        # Reusable Astro components
-│   ├── layouts/          # Page layouts
-│   ├── pages/            # Page files
-│   ├── styles/           # Global styles
-│   └── config.ts         # Site configuration
-├── public/               # Static assets
-├── dist/                 # Built site (GitHub Pages)
-├── astro.config.mjs      # Astro configuration
-├── tailwind.config.cjs   # TailwindCSS configuration
-└── package.json          # Project dependencies
+├── index.html          # Main portfolio page
+├── style.css           # Styling
+├── script.js           # JavaScript functionality
+├── .nojekyll           # Tells GitHub Pages to skip Jekyll
+├── assets/             # Images and media
+├── mraditya01_cv.pdf   # Curriculum Vitae
+├── README.md           # This file
+└── .gitignore          # Git ignore rules
 ```
-
-## Development
-
-### Prerequisites
-- Node.js 16+
-- pnpm (recommended) or npm
-
-### Setup
-
-```bash
-# Install dependencies
-pnpm install
-
-# Start development server
-pnpm run dev
-
-# Build for production
-pnpm run build
-
-# Preview build
-pnpm run preview
-```
-
-## Deployment
-
-This site is automatically deployed to GitHub Pages on every push to the `main` branch using GitHub Actions.
-
-To deploy manually:
-1. Run `pnpm run build`
-2. The `dist` folder contains the built site
-3. Commit and push to trigger automatic deployment
 
 ## Customization
 
-### Update Site Content
-- Edit `src/pages/index.astro` for homepage content
-- Edit `src/config.ts` for site metadata
-- Update `public/` directory with your assets
+### Update Content
+- Edit `index.html` to modify text content
+- Update `assets/` folder with your images
+- Replace `mraditya01_cv.pdf` with your CV
 
-### Change Colors
-- Edit `tailwind.config.cjs` to modify the primary color and theme
-- Update `src/styles/global.css` for custom styles
+### Modify Colors
+- Orange accent: Search `#ff8c00` in `style.css` to change
+- Dark background: Search `#0f172a` to change
+- Text colors: Adjust `#cbd5e1`, `#94a3b8`, etc.
 
-### Add New Pages
-1. Create a new `.astro` file in `src/pages/`
-2. Use `BaseLayout` component for consistent styling
-3. The file path automatically becomes the route
+### Add/Remove Sections
+- Each section is wrapped in `<section id="...">`
+- Add a new section by copying an existing one
+- Update the navigation menu in the header and sidebar
+
+## Deployment
+
+This site is deployed on GitHub Pages at `https://mraditya01.github.io`
+
+The `.nojekyll` file tells GitHub Pages to serve files as-is without Jekyll processing.
 
 ## License
 
