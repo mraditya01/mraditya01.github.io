@@ -1,0 +1,133 @@
+---
+export interface Props {
+  sideBarActiveItemID?: string;
+}
+
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<aside class="fixed left-0 top-0 h-screen w-64 bg-neutral-950 border-r border-neutral-800 p-8 overflow-y-auto hidden lg:block pt-24">
+  <!-- Profile section -->
+  <div class="flex flex-col items-center mb-8">
+    <img 
+      src="/profile.webp" 
+      alt="Muhammad Raditya Giovanni" 
+      class="w-32 h-32 rounded-full object-cover mb-4 border-2 border-primary"
+    />
+    <h2 class="text-2xl font-bold text-center mb-2">Muhammad Raditya Giovanni</h2>
+    <p class="text-neutral-400 text-sm text-center">Master's Student | Autonomous Vehicles | AI</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="space-y-4 mb-12">
+    <a 
+      href="/#home" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'home' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      🏠 Home
+    </a>
+    <a 
+      href="/#research" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'research' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      🔬 Research
+    </a>
+    <a 
+      href="/#education" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'education' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      📚 Education
+    </a>
+    <a 
+      href="/#publications" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'publications' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      📄 Publications
+    </a>
+    <a 
+      href="/#experience" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'experience' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      👩‍💻 Experience
+    </a>
+    <a 
+      href="/#projects" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'projects' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      ⭐ Projects
+    </a>
+    <a 
+      href="/#awards" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'awards' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      🏅 Awards
+    </a>
+    <a 
+      href="/#skills" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'skills' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      💻 Skills
+    </a>
+    <a 
+      href="/#contact" 
+      class={`block py-2 px-3 rounded-lg transition-colors ${
+        sideBarActiveItemID === 'contact' ? 'bg-primary text-black font-semibold' : 'hover:bg-neutral-900'
+      }`}
+    >
+      💌 Contact
+    </a>
+  </nav>
+
+  <!-- Social links -->
+  <div class="flex gap-4 text-2xl justify-center">
+    <a href="https://linkedin.com/in/mradityagio" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/mraditya01" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="mailto:mradityagio@gmail.com" class="hover:text-primary transition-colors" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://facebook.com/adit.giovanni" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+
+  <!-- CV Download -->
+  <div class="mt-8">
+    <a 
+      href="/mraditya01_cv.pdf" 
+      target="_blank" 
+      class="btn-primary w-full text-center block"
+    >
+      Download CV
+    </a>
+  </div>
+</aside>
+
+<!-- Mobile bottom navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-neutral-950 border-t border-neutral-800 lg:hidden">
+  <div class="flex justify-around py-3 text-sm">
+    <a href="/#home" class="text-neutral-400 hover:text-primary transition-colors">Home</a>
+    <a href="/#research" class="text-neutral-400 hover:text-primary transition-colors">Research</a>
+    <a href="/#projects" class="text-neutral-400 hover:text-primary transition-colors">Projects</a>
+    <a href="/#contact" class="text-neutral-400 hover:text-primary transition-colors">Contact</a>
+  </div>
+</nav>

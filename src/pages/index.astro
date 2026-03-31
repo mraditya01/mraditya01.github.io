@@ -1,0 +1,382 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import HorizontalCard from '../components/HorizontalCard.astro';
+import TimeLine from '../components/TimeLine.astro';
+
+const title = "Muhammad Raditya Giovanni - Portfolio";
+---
+
+<BaseLayout title={title} sideBarActiveItemID="home">
+  <div class="max-w-4xl mx-auto space-y-16">
+    <!-- Home Section -->
+    <section id="home" class="scroll-mt-20">
+      <div class="flex flex-col md:flex-row gap-8 items-center mb-12 animate-fadeIn">
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Hi there! 👋🏻
+          </h1>
+          <h2 class="text-2xl md:text-3xl text-neutral-300 mb-6">
+            I'm Muhammad Raditya Giovanni
+          </h2>
+          
+          <p class="text-neutral-300 leading-relaxed mb-6">
+            I study <span class="text-primary font-semibold">Planning, control, and localization for self-driving vehicles</span>, using techniques from a variety of fields and sensors such as inverse kinematics, anomaly detection, sound localization, sound and image classification, microphones, RGB camera, and LIDAR.
+          </p>
+          
+          <p class="text-neutral-300 leading-relaxed mb-6">
+            Currently, I am a master student at <a href="https://www.nagoya-u.ac.jp/" target="_blank" class="text-primary font-semibold hover:text-orange-600">Nagoya University</a> and live in Japan. I will receive my master degree in Electronic, Electrical, and Informatics Engineering under <a href="https://www.ucl.nuee.nagoya-u.ac.jp/" target="_blank" class="text-primary font-semibold hover:text-orange-600">Ubiquitous Computing Lab</a> in September 2026, under the supervision of <a href="https://scholar.google.com/citations?user=rHbv6e8AAAAJ&hl=en" target="_blank" class="text-primary font-semibold hover:text-orange-600">Prof. Nobuo Kawaguchi</a>.
+          </p>
+
+          <p class="text-neutral-300 leading-relaxed mb-8">
+            Any research collaborations are welcome!
+          </p>
+
+          <a href="/mraditya01_cv.pdf" target="_blank" class="btn-primary">
+            Download CV (PDF)
+          </a>
+        </div>
+        <div class="flex-shrink-0 md:w-64">
+          <img 
+            src="/profile.webp" 
+            alt="Muhammad Raditya Giovanni" 
+            class="w-full rounded-xl object-cover border-2 border-primary shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8 text-primary">🔬 Research</h2>
+      
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold">Sound Localization and Classification for Self-driving Vehicle</h3>
+          
+          <p class="text-neutral-300">
+            Multiple Moving Agents Systems with physical multiple moving agents will be more and more common, e.g., automated warehouse, delivery service with robots, self-driving cars, etc. Obviously, such systems should be well-coordinated, but in general, coordination/cooperation themselves are ambiguous and intractable.
+          </p>
+
+          <p class="text-neutral-300">
+            My research questions are twofold: 1) explore the possibility of sound localization on self-driving vehicle, 2) physics data simulation for audio in urban environment.
+          </p>
+
+          <p class="text-neutral-400 text-sm">
+            <strong>Keywords:</strong> Self-driving vehicle, Sound Localization and Classification, Physics Simulation
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-4 mt-6">
+            <img src="/assets/Project 12.gif" alt="Research visualization" class="rounded-lg w-full h-auto object-cover" />
+            <img src="/assets/Testdata.gif" alt="Test data visualization" class="rounded-lg w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <hr class="border-neutral-800" />
+
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <h3 class="text-2xl font-bold">VR Teleoperation System with Real-Time 3D Reconstruction</h3>
+            <a href="https://github.com/mraditya01/Piper_IK_interface" target="_blank" class="text-primary text-2xl hover:text-orange-600">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+
+          <p class="text-neutral-300">
+            Developed a VR-based teleoperation system that enables intuitive control of a robotic arm with real-time 3D environment reconstruction. The system integrates depth sensing and 3D reconstruction techniques to provide immersive spatial awareness in a human-in-the-loop VR environment.
+          </p>
+
+          <p class="text-neutral-300">
+            The research focuses on improving teleoperation safety, responsiveness, and situational awareness by streaming reconstructed 3D scenes around the manipulator in real time, reducing latency while maintaining visual fidelity and control precision.
+          </p>
+
+          <p class="text-neutral-400 text-sm">
+            <strong>Keywords:</strong> VR Teleoperation, 3D Reconstruction, Robotic Arm, Human-in-the-Loop, Spatial Perception
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-4 mt-6">
+            <video autoplay loop muted playsinline class="rounded-lg w-full h-auto">
+              <source src="/assets/realtime_splat.mp4" type="video/mp4" />
+            </video>
+            <img src="/assets/model_vr.png" alt="VR model" class="rounded-lg w-full h-auto object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8 text-primary">📚 Education</h2>
+      
+      <div class="space-y-6">
+        <TimeLine
+          title="Master of Engineering"
+          subtitle="Nagoya University"
+          organization="Department of Electronic, Electrical, and Informatics Engineering"
+          date="May 2025 - September 2026"
+          location="Nagoya, Japan"
+          details={[
+            "G30 Program (English-taught)",
+            "Ubiquitous Computing Lab",
+            "Focus on autonomous vehicles and AI"
+          ]}
+        />
+
+        <TimeLine
+          title="Bachelor of Engineering"
+          subtitle="Nagoya University"
+          organization="Department of Aerospace and Mechanical Engineering"
+          date="October 2019 - September 2023"
+          location="Nagoya, Japan"
+          details={[
+            "G30 Program (English-taught)",
+            "Signal Processing Lab",
+            "GPA: 3.8/4.0"
+          ]}
+        />
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8 text-primary">📄 Publications</h2>
+      
+      <div class="space-y-6">
+        <div class="card-base">
+          <div class="flex gap-6 flex-col md:flex-row">
+            <div class="md:w-32 flex-shrink-0">
+              <img src="/assets/2.gif" alt="Publication thumbnail" class="w-full rounded-lg h-auto object-cover" />
+            </div>
+            <div class="flex-1">
+              <h4 class="text-lg font-bold mb-2">Anomalous Sound Localization and Classification in Urban Environments for Mobile Autonomous Vehicles</h4>
+              <p class="text-neutral-400 text-sm mb-2">
+                <strong>Authors:</strong> Muhammad Raditya Giovanni, Alexander Carballo, Kento Ohtani, Kazuya Takeda
+              </p>
+              <p class="text-neutral-400 text-sm mb-2">
+                <strong>Conference:</strong> 7th International Symposium on Future Active Safety Technology toward zero traffic accidents (FAST-Zero'23)
+              </p>
+              <p class="text-neutral-400 text-sm mb-4">
+                <strong>Date:</strong> November 2023
+              </p>
+              <a href="https://www.fast-zero.info/2023/index.html" target="_blank" class="text-primary hover:text-orange-600 text-lg">
+                <i class="fas fa-home"></i> Conference Website
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8 text-primary">👩‍💻 Work Experience</h2>
+      
+      <div class="space-y-6">
+        <TimeLine
+          title="Control and Planning Engineer"
+          subtitle="TIER IV"
+          organization="Open-source Autonomous Driving (Autoware)"
+          date="2023 - Present"
+          location="Nagoya, Japan"
+          details={[
+            "Developed an interface between Autoware and CARLA in ROS2 for simulation and real-world integration",
+            "Improved geometrical calculations (Triangulation, SAT, XOR) for better spatial reasoning and collision detection",
+            "Created a new library to replace Boost::geometry functions, achieving faster computation in Autoware",
+            "Developed a trajectory evaluator to assess and improve planning and control efficiency"
+          ]}
+        />
+
+        <TimeLine
+          title="Autonomous Driving System Intern"
+          subtitle="Sony Honda Mobility"
+          organization="Autonomous Driving Division"
+          date="August 2025 - September 2025"
+          location="Tokyo, Japan"
+          details={[
+            "Enhanced topology prediction by integrating temporal features to the machine learning model",
+            "Deployed the model on AWS for learning and benchmarking with a 3-member team",
+            "Designed a framework to evaluate temporal topology changes for safer adaptive route planning"
+          ]}
+        />
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8 text-primary">⭐ Projects</h2>
+      
+      <p class="text-neutral-400 mb-8 italic">
+        These past works are not directly relevant to my research but they inspired me a lot.
+      </p>
+
+      <div class="grid gap-6">
+        <HorizontalCard
+          title="Masked Audio Reconstruction using U-Net for Anomaly Detection"
+          desc="Developed a U-Net model to compute the reconstruction error of frequency mask mel-spectrogram using Python, Keras, and TensorFlow-IO. Collected 8465 10-second audio-visual dataset by driving and recording around Nagoya University."
+          url="https://github.com/mraditya01/Anomaly_detection_using_U-net_mask_reconstruction"
+          tags={["Python", "TensorFlow", "Audio Processing", "ML"]}
+          badge="Machine Learning"
+        />
+
+        <HorizontalCard
+          title="Arduino Powered GPS Waypoint Autonomous Vehicle"
+          desc="Developed a vehicle that can autonomously navigate through a series of waypoints (GPS coordinates) while avoiding obstacles. Incorporated multiple Arduino modules including compass, mini GPS, magnetic sensor, ultrasonic sensor, and Bluetooth module."
+          url="https://github.com/mraditya01/GPS_Waypoint_Driving_Arduino"
+          tags={["Arduino", "GPS", "Robotics", "C++"]}
+          badge="Embedded Systems"
+        />
+
+        <HorizontalCard
+          title="Ball Tracking on Uneven Surface (Group Project)"
+          desc="Created a Git repository for the team and delegated responsibilities. Led the programming committee utilizing OpenCV to identify and track balls via color selection and background subtraction methods."
+          url="https://github.com/jgfranco17/design-practice-2"
+          tags={["OpenCV", "Python", "Computer Vision", "Team Lead"]}
+          badge="Computer Vision"
+        />
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8 text-primary">🏅 Awards & Honors</h2>
+      
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Scholarships</h3>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex gap-3">
+              <span class="text-primary">•</span>
+              <div>
+                <p class="font-semibold">UFJ Trust Scholarship</p>
+                <p class="text-neutral-400 text-sm">May 2025 - September 2026 • ¥115,000/month</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary">•</span>
+              <div>
+                <p class="font-semibold">MEXT Scholarship U2U</p>
+                <p class="text-neutral-400 text-sm">October 2019 - September 2023 • ¥120,000/month</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">Startup & Entrepreneurship</h3>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex gap-3">
+              <span class="text-primary">•</span>
+              <p><strong>Steply - Tongali Startup Program:</strong> Co-founded Steply, where our team built a prototype app that creates personalized travel itineraries from users' screenshots and preferences using VLM. Selected to present at SXSW in February 2026.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">Other Awards</h3>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex gap-3">
+              <span class="text-primary">•</span>
+              <p><strong>Singapore Mathematical Olympiad</strong> (December 2017) - Bronze Award</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8 text-primary">💻 Skills & Tools</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Programming Languages</h3>
+          <div class="flex flex-wrap gap-2">
+            {["Python", "C++", "C", "MATLAB", "R", "JavaScript", "HTML/CSS", "Arduino"].map((skill) => (
+              <span class="badge badge-primary">{skill}</span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">ML/AI Libraries</h3>
+          <div class="flex flex-wrap gap-2">
+            {["TensorFlow", "PyTorch", "NumPy", "SciPy", "Librosa", "Pandas"].map((skill) => (
+              <span class="badge badge-primary">{skill}</span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">Development Tools</h3>
+          <div class="flex flex-wrap gap-2">
+            {["Git/GitHub", "Docker", "VS Code", "GitHub Actions", "ROS2", "CARLA"].map((skill) => (
+              <span class="badge badge-primary">{skill}</span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">Cloud & Databases</h3>
+          <div class="flex flex-wrap gap-2">
+            {["AWS", "Docker", "MySQL", "SQLite", "Cassandra", "MQTT"].map((skill) => (
+              <span class="badge badge-primary">{skill}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-2">Languages</h3>
+          <ul class="space-y-2 text-neutral-300">
+            <li><strong>Proficient:</strong> English, Bahasa Indonesia</li>
+            <li><strong>Basic:</strong> Japanese</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-mt-20 mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-primary">💌 Contact</h2>
+      
+      <div class="card-base">
+        <p class="text-neutral-300 mb-6">
+          Feel free to reach out to me for research collaborations, job opportunities, or just a friendly chat!
+        </p>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="https://linkedin.com/in/mradityagio" target="_blank" class="btn-primary">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/mraditya01" target="_blank" class="btn-primary">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="mailto:mradityagio@gmail.com" class="btn-primary">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://facebook.com/adit.giovanni" target="_blank" class="btn-primary">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeInAnimation 0.6s ease-out;
+  }
+</style>

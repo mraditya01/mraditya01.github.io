@@ -1,0 +1,53 @@
+---
+export interface Props {
+  sideBarActiveItemID?: string;
+}
+
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-neutral-950 border-b border-neutral-800 shadow-md">
+  <nav class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-primary hover:text-orange-600 transition-colors">
+        M.R.G
+      </a>
+      
+      <!-- Mobile menu button - visible on small screens -->
+      <button class="md:hidden btn btn-ghost btn-circle" id="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex gap-6">
+        <a href="/#home" class={`link link-hover ${sideBarActiveItemID === 'home' ? 'text-primary' : ''}`}>Home</a>
+        <a href="/#research" class={`link link-hover ${sideBarActiveItemID === 'research' ? 'text-primary' : ''}`}>Research</a>
+        <a href="/#education" class={`link link-hover ${sideBarActiveItemID === 'education' ? 'text-primary' : ''}`}>Education</a>
+        <a href="/#projects" class={`link link-hover ${sideBarActiveItemID === 'projects' ? 'text-primary' : ''}`}>Projects</a>
+        <a href="/#contact" class={`link link-hover ${sideBarActiveItemID === 'contact' ? 'text-primary' : ''}`}>Contact</a>
+      </div>
+    </div>
+
+    <!-- Mobile menu - hidden by default -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-neutral-800">
+      <a href="/#home" class="block py-2 link link-hover">Home</a>
+      <a href="/#research" class="block py-2 link link-hover">Research</a>
+      <a href="/#education" class="block py-2 link link-hover">Education</a>
+      <a href="/#projects" class="block py-2 link link-hover">Projects</a>
+      <a href="/#contact" class="block py-2 link link-hover">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

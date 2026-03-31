@@ -1,0 +1,33 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  organization?: string;
+  date?: string;
+  location?: string;
+  details?: string[];
+}
+
+const { title, subtitle, organization, date, location, details } = Astro.props;
+---
+
+<div class="relative pl-8 pb-8 border-l-2 border-primary last:pb-0">
+  <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-0"></div>
+  
+  <h4 class="text-lg font-bold text-primary">{title}</h4>
+  {subtitle && <p class="text-neutral-300 font-semibold">{subtitle}</p>}
+  {organization && <p class="text-neutral-400">{organization}</p>}
+  {date && <p class="text-neutral-500 text-sm">{date}</p>}
+  {location && <p class="text-neutral-500 text-sm">{location}</p>}
+  
+  {details && (
+    <ul class="mt-3 space-y-2 text-neutral-300">
+      {details.map((detail) => (
+        <li class="flex gap-2">
+          <span class="text-primary">•</span>
+          <span>{detail}</span>
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
